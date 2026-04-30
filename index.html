@@ -21,34 +21,35 @@ Select ONE Additional Feature to Add
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>Quiz About [Me]</h1>
+    <h1>Quiz About Me AKA DA BADDEST😍😁</h1>
     <hr />
     <!-- Movie Question -->
     <form id="movie-form">
       <label>
-        🎥 What is my favorite movie?
+        🎥 What is my TV show?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
-          <option value="movie4">movie 4</option>
+          <option value="movie1">The Vampier Diaries</option>
+          <option value="movie2">Fuller House</option>
+          <option value="movie3">Love Island</option>
+          <option value="movie4"></option>
         </select>
       </label>
       <button type="submit">Check Movie Answer</button>
     </form>
     <div id="movie-result">
-      <p id="movie-text"></p>
+      <p id="movie-text"></p> 
+      <img id="correct" src="https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg" width="200">
     </div>
     <hr />
     <!-- Book Question -->
     <form id="book-form">
       <label>
-        📖 What is my favorite book?
+        📖 What is my fav food in the world? (you should know this based on all my other projects)?
         <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+          <option value="food1">sushi</option>
+          <option value="food2">starbucks</option>
+          <option value="food3">penne alla vodka</option>
+          <option value="food4">french fries</option>
         </select>
       </label>
       <button type="submit">Check Book Answer</button>
@@ -58,6 +59,7 @@ Select ONE Additional Feature to Add
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
+      $("#correct").hide()
       
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -67,10 +69,11 @@ Select ONE Additional Feature to Add
         var answer = $answer.val();
 
         if (answer === "movie1") {
-          $("#movie-text").text("YESSSS!");
-        } 
+          $("#movie-text").text("YESSSS! do you want a 🍪?");
+           $("#correct").fadeIn(2000)
+        }  
         else {
-          $("#movie-text").text("Try Again!");
+          $("#movie-text").text("Wait so you are actually... INCORRECT FLOP");
         }
       });
 
@@ -81,13 +84,16 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-text").text("YESSSS!");
-        } 
-        else {
-          $("#book-text").text("Try Again!");
+        if (answer === "book3") {
+          $("#book-text").text("Omg finally you did something right!");
+        } else {
+          $("#book-text"). text("bruh you are not the best at this at all")
         }
+
+
       });
+
+      
       
     </script>
   </body>
