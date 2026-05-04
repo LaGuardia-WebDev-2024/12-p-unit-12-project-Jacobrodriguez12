@@ -38,7 +38,8 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result">
       <p id="movie-text"></p> 
-      <img id="correct" src="https://images.ctfassets.net/hrltx12pl8hq/5596z2BCR9KmT1KeRBrOQa/4070fd4e2f1a13f71c2c46afeb18e41c/shutterstock_451077043-hero1.jpg" width="200">
+      <img id="correct" src="IMG.jpeg" width="300">
+      <img id="incorrect" src="hi.jpeg" width="300">
     </div>
     <hr />
     <!-- Book Question -->
@@ -56,10 +57,20 @@ Select ONE Additional Feature to Add
     </form>
     <div id="book-result">
       <p id="book-text"></p>
+      <img id="correctt" src="aaliyah.jpeg" width="300">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <h1 id="jacob" style="display:block;">jacob</h1>
+    <img id="jacob-pic" src="jacob.jpeg">
+  <br>
+    <button class="buttons" id="button1"> click to fade out</button>
+    <button class="buttons" id="button2">click to make jacob smaller</button>
+
     <script>
       $("#correct").hide()
+      $("#incorrect").hide()
+      $("#correctt").hide ()
       
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -74,6 +85,7 @@ Select ONE Additional Feature to Add
         }  
         else {
           $("#movie-text").text("Wait so you are actually... INCORRECT FLOP");
+          $("#incorrect").fadeIn(2000)
         }
       });
 
@@ -84,8 +96,9 @@ Select ONE Additional Feature to Add
         var $answer = $("#book-answer");
         var answer = $answer.val();
 
-        if (answer === "book3") {
+        if (answer === "food3") {
           $("#book-text").text("Omg finally you did something right!");
+          $("#correctt").fadeIn(2000)
         } else {
           $("#book-text"). text("bruh you are not the best at this at all")
         }
@@ -93,7 +106,21 @@ Select ONE Additional Feature to Add
 
       });
 
-      
+      var $pic =$("#jacob-pic");
+      var $h1 = $("#jacob");
+
+      $("#button1").click(function() {
+        $pic.fadeOut(2000);
+        $h1.fadeOut();
+      });
+
+      // $("#button2").click(function() {
+      //   $("#jacob-pic").animate ({
+      //     width: "140px",
+      //     marginLeft:"10px",
+      //     borderWidth: "3px",
+      //   }, 2000);
+      // });
       
     </script>
   </body>
