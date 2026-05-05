@@ -61,6 +61,7 @@ Select ONE Additional Feature to Add
     <div id="book-result">
       <p id="book-text"></p>
       <img id="correctt" src="aaliyah.jpeg" width="300">
+      <img id="incorrectt" src="jayla.jpeg" width="300">
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -74,6 +75,7 @@ Select ONE Additional Feature to Add
       $("#correct").hide()
       $("#incorrect").hide()
       $("#correctt").hide ()
+      $("#incorrectt").hide()
       
       //========================Movie Question jQuery Code
       $("#movie-form").on("submit", function (event) {
@@ -104,6 +106,7 @@ Select ONE Additional Feature to Add
           $("#correctt").fadeIn(2000)
         } else {
           $("#book-text"). text("bruh you are not the best at this at all")
+          $("#incorrectt").fadeIn(2000)
         }
 
 
